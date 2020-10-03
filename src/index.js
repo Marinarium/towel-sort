@@ -6,11 +6,7 @@ module.exports = function towelSort (matrix) {
     if (matrix !== undefined && (matrix.length > 0)) {
 
       matrix.forEach(function(item, i){
-        if(i % 2){
-          arr = arr.concat(item.reverse());
-        } else {
-          arr = arr.concat(item);
-        } 
+        (i % 2) ? arr = arr.concat(item.reverse()) : arr = arr.concat(item)
       });
         
     }
